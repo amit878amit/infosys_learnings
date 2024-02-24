@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Tic Tac Toe!!</h2>
+
+<p id="demo1">Amit welcomes you aboard!!</p>
+<p>Two players are required to play this game. Bring your partner and make your move!! Good Luck!!</p>
+<!-- <p id="demo"></p> -->
+
+<script>
+i=0;
+v_a11='m';v_a12='m';v_a13='m';
+v_a21='m';v_a22='m';v_a23='m';
+v_a31='m';v_a32='m';v_a33='m';
+return_val='n';
+already_clicked=false;
+function myFunction(id) { 
+    if(i%2 === 0){
+    return_val='X';
+    }
+    else{ 
+    return_val='O';
+    }
+    
+if(id==="a11"){
+if(v_a11==='m'){
+i++;
+v_a11=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a11;
+}
+if(id==="a12"){
+if(v_a12==='m'){
+i++;
+v_a12=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a12;
+}
+if(id==="a13"){
+if(v_a13==='m'){
+i++;
+v_a13=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a13;
+}
+if(id==="a21"){
+if(v_a21==='m'){
+i++;
+v_a21=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a21;
+}
+if(id==="a22"){
+if(v_a22==='m'){
+i++;
+v_a22=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a22;
+}
+if(id==="a23"){
+if(v_a23==='m'){
+i++;
+v_a23=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a23;
+}
+if(id==="a31"){
+if(v_a31==='m'){
+i++;
+v_a31=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a31;
+}
+if(id==="a32"){
+if(v_a32==='m'){
+i++;
+v_a32=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a32;
+}
+if(id==="a33"){
+if(v_a33==='m'){
+i++;
+v_a33=return_val;
+}
+/* compare function */
+compare1=((v_a11==='O') && (v_a12==='O') && (v_a13==='O')) || ((v_a21==='O') && (v_a22==='O') && (v_a23==='O')) || ((v_a31==='O') && (v_a32==='O') && (v_a33==='O'));
+compare2=((v_a11==='X') && (v_a12==='X') && (v_a13==='X')) || ((v_a21==='X') && (v_a22==='X') && (v_a23==='X')) || ((v_a31==='X') && (v_a32==='X') && (v_a33==='X'));
+compare3=((v_a11==='O') && (v_a21==='O') && (v_a31==='O')) || ((v_a12==='O') && (v_a22==='O') && (v_a32==='O')) || ((v_a13==='O') && (v_a23==='O') && (v_a33==='O'));
+compare4=((v_a11==='X') && (v_a21==='X') && (v_a31==='X')) || ((v_a12==='X') && (v_a22==='X') && (v_a32==='X')) || ((v_a13==='X') && (v_a23==='X') && (v_a33==='X'));
+compare5=((v_a11==='O') && (v_a22==='O') && (v_a33==='O')) || ((v_a13==='O') && (v_a22==='O') && (v_a31==='O'));
+compare6=((v_a11==='X') && (v_a22==='X') && (v_a33==='X')) || ((v_a13==='X') && (v_a22==='X') && (v_a31==='X'));
+compare7=((v_a11!='m') && (v_a12!='m') && (v_a13!='m')) && ((v_a21!='m') && (v_a22!='m') && (v_a23!='m')) && ((v_a31!='m') && (v_a32!='m') && (v_a33!='m'));
+compare=compare1 || compare2 || compare3 || compare4 || compare5;
+if(compare1 || compare3 || compare5){
+alert("Congratulations!!! You chose O and You won!!!");
+}else
+if(compare2 || compare4 || compare6){
+alert("Congratulations!!! You chose X and You won!!!");
+}else
+if(compare7){
+alert("Oops!!! Tough game!!! Nobody Won..... But hurray!! nobody loosed also :)");
+}
+/* end of compare function */
+return v_a33;
+}    
+}
+</script>
+<style>
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+     text-align: center;
+}
+
+
+td {
+    height: 50px;
+    width: 50px;
+}
+
+</style>
+
+<table>
+<tbody>
+<tr>
+<td style="border-style: solid;" id="a11" onclick="document.getElementById('a11').innerHTML = 
+myFunction(id);" ></td>
+<td style="border-style: solid;" id="a12" onclick="document.getElementById('a12').innerHTML = myFunction(id)"></td>
+<td style="border-style: solid;" id="a13" onclick="document.getElementById('a13').innerHTML = myFunction(id)"></td>
+</tr>
+<tr>
+<td style="border-style: solid;" id="a21" onclick="document.getElementById('a21').innerHTML = myFunction(id)"></td>
+<td style="border-style: solid;" id="a22" onclick="document.getElementById('a22').innerHTML = myFunction(id)"></td>
+<td style="border-style: solid;" id="a23" onclick="document.getElementById('a23').innerHTML = myFunction(id)"></td>
+</tr>
+<tr>
+<td style="border-style: solid;" id="a31" onclick="document.getElementById('a31').innerHTML = myFunction(id)"></td>
+<td style="border-style: solid;" id="a32" onclick="document.getElementById('a32').innerHTML = myFunction(id)"></td>
+<td style="border-style: solid;" id="a33" onclick="document.getElementById('a33').innerHTML = myFunction(id)"></td>
+</tr>
+</tbody>
+</table>
+<br><br>
+<p>Please Click on below button to start afresh.</p>
+<button onclick="reload_page()">New Game</button>
+<script>
+function reload_page() {
+    location.reload();
+}
+</script>
+
+</body>
+</html>
